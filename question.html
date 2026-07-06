@@ -3,46 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light">
   <title>❤️</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
     *{
       margin:0;
       padding:0;
       box-sizing:border-box;
-      font-family:Arial,sans-serif;
+      font-family:'Poppins', sans-serif;
     }
-
+    html {
+      color-scheme: light;
+    }
     body{
       display:flex;
       justify-content:center;
       align-items:center;
       min-height:100vh;
-      background:#ffc0cb;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
       overflow:hidden;
     }
-
     .card{
-      background:#fff;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
       width:700px;
+      max-width: 90vw;
       padding:40px;
       border-radius:20px;
-      box-shadow:0 10px 20px rgba(0,0,0,.2);
+      box-shadow:0 10px 30px rgba(0,0,0,.25);
       text-align:center;
     }
-
     .gif-container{
       display:flex;
       justify-content:center;
       margin-bottom:20px;
     }
-
-    h1{
-      color:#ff4d6d;
-      font-size:40px;
-      margin:20px 0;
+    .beating-heart{
+      font-size: 90px;
+      animation: beat 1.1s infinite ease-in-out;
     }
-
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      25% { transform: scale(1.2); }
+      50% { transform: scale(0.95); }
+      75% { transform: scale(1.15); }
+    }
+    h1{
+      color:#fff;
+      font-size:36px;
+      font-weight: 700;
+      margin:20px 0;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
     .buttons{
       display:flex;
       justify-content:center;
@@ -51,88 +68,62 @@
       margin-top:20px;
       height:60px;
     }
-
     button{
       padding:12px 30px;
       border:none;
       border-radius:30px;
-      font-size:20px;
+      font-size:18px;
+      font-weight: 600;
       cursor:pointer;
       transition:.3s;
     }
-
     .yes-btn{
-      background:#ff4d6d;
+      background:#e0245e;
       color:#fff;
     }
-
     .yes-btn:hover{
-      background:#ff1f4d;
+      background:#c31d4f;
     }
-
     .no-btn{
-      background:#d9d9d9;
-      color:#000;
+      background: rgba(255, 255, 255, 0.85);
+      color:#e0245e;
     }
-
     #message{
       margin-top:20px;
-      color:#ff4d6d;
+      color:#fff;
       font-size:22px;
       font-weight:bold;
     }
   </style>
-
 </head>
 <body>
-
 <div class="card">
-
   <div class="gif-container">
-    <div class="tenor-gif-embed"
-         data-postid="17266900336609124174"
-         data-share-method="host"
-         data-aspect-ratio="1.07519"
-         data-width="35%">
-    </div>
+    <div class="beating-heart">❤️</div>
   </div>
-
   <h1>Gusto mo ba maging part ng buhay ko? ❤️</h1>
-
   <div class="buttons">
     <button class="yes-btn" onclick="yesClick()">Yes ❤️</button>
     <button class="no-btn" id="noBtn">No 💔</button>
   </div>
-
   <p id="message"></p>
-
 </div>
-
-<script async src="https://tenor.com/embed.js"></script>
-
 <script>
   const noBtn = document.getElementById("noBtn");
-
   function moveButton() {
     noBtn.style.position = "fixed";
-
     const maxX = window.innerWidth - noBtn.offsetWidth;
     const maxY = window.innerHeight - noBtn.offsetHeight;
-
     const x = Math.random() * maxX;
     const y = Math.random() * maxY;
-
     noBtn.style.left = x + "px";
     noBtn.style.top = y + "px";
   }
-
   noBtn.addEventListener("mouseenter", moveButton);
   noBtn.addEventListener("click", moveButton);
-
   function yesClick() {
     window.location.href = "iloveyou.html";
   }
 </script>
-
 </body>
 </html>
