@@ -1,0 +1,96 @@
+/* ===========================
+   LOADING SCREEN
+=========================== */
+
+#loader{
+
+  position:fixed;
+
+  inset:0;
+
+  background:linear-gradient(135deg,#ff6b81,#ff758c,#ff9a9e);
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  z-index:999999;
+
+  transition:opacity .8s ease,
+  visibility .8s ease;
+
+}
+
+#loader.hide{
+
+  opacity:0;
+
+  visibility:hidden;
+
+}
+
+.loader-content{
+
+  text-align:center;
+
+  color:white;
+
+}
+
+.loader-progress{
+
+  width:250px;
+
+  height:12px;
+
+  margin:auto;
+
+  border-radius:30px;
+
+  overflow:hidden;
+
+}
+
+.heart-loader{
+
+  font-size:90px;
+
+  animation:heartbeat 1s infinite;
+
+}
+
+@keyframes heartbeat{
+
+  0%{
+
+    transform:scale(1);
+
+  }
+
+  20%{
+
+    transform:scale(1.25);
+
+  }
+
+  40%{
+
+    transform:scale(1);
+
+  }
+
+  60%{
+
+    transform:scale(1.25);
+
+  }
+
+  100%{
+
+    transform:scale(1);
+
+  }
+
+}

@@ -1,0 +1,52 @@
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:pink;
+  font-family:Arial, sans-serif;
+  overflow:hidden;
+}
+
+.card{
+  text-align:center;
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 20px rgba(0,0,0,.2);
+}
+
+.gif{
+  width:200px;
+  border-radius:15px;
+}
+
+h1{
+  color:#ff4d6d;
+}
+
+.buttons{
+  margin-top:20px;
+  position:relative;
+  height:100px;
+}
+
+button{
+  padding:10px 25px;
+  border:none;
+  border-radius:20px;
+  cursor:pointer;
+  font-size:16px;
+}
+
+.yes-btn{
+  background:#ff4d6d;
+  color:white;
+  margin-right:20px;
+}
+
+.no-btn{
+  background:#ccc;
+  position:absolute;
+}
